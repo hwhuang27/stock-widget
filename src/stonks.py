@@ -21,20 +21,20 @@ def generate_open_price(symbol, notify_price):
         open_price = round(current_open[0], 2)
         print(symbol + " @ " + current_time)
         print(open_price)
-        print(open_price > notify_price) # true
-        print(open_price < notify_price) # false
-        print(open_price = notify_price) # false
 
-        if open_price <= notify_price:
-            # notification code
-            print("BUY NOW!!!")
+        if (open_price <= notify_price):
+            notify()
+
 
         time.sleep(60.0 - ((time.time() - starttime) % 60.0))
 
 # set notification when price goes below threshold
 def notify():
+    # notification code here
+    
 
 
+    print("BUY NOW!!!") # placeholder
     return
 
 def main():
